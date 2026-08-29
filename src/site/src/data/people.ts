@@ -102,10 +102,30 @@ export const people: Person[] = [
     ],
   },
   {
+    id: 'xiezipeng',
+    name: '谢梓鹏',
+    primary: '量潮科技资深技术顾问',
+    order: 6,
+    titles: [
+      { org: 'qtalliance', title: '联盟代表' },
+      { org: 'qttech', title: '资深技术顾问' },
+    ],
+  },
+  {
+    id: 'douye',
+    name: '窦烨',
+    primary: '量潮科技高级技术顾问',
+    order: 7,
+    titles: [
+      { org: 'qtalliance', title: '联盟代表' },
+      { org: 'qttech', title: '高级技术顾问' },
+    ],
+  },
+  {
     id: 'tuyafang',
     name: '涂雅芳',
     primary: '量潮科技股东代表、执行副总裁',
-    order: 6,
+    order: 8,
     titles: [
       { org: 'qtalliance', title: '联盟代表、联盟秘书长', desc: '日常运营协调与信息流转' },
       { org: 'qttech', title: '股东代表、执行副总裁' },
@@ -115,28 +135,10 @@ export const people: Person[] = [
     id: 'liujingyi',
     name: '刘婧怡',
     primary: '量潮科技股东代表、秘书长',
-    order: 7,
+    order: 9,
     titles: [
       { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
       { org: 'qttech', title: '股东代表、秘书长' },
-    ],
-  },
-  {
-    id: 'xiezipeng',
-    name: '谢梓鹏',
-    primary: '量潮科技资深技术顾问',
-    order: 8,
-    titles: [
-      { org: 'qttech', title: '资深技术顾问' },
-    ],
-  },
-  {
-    id: 'douye',
-    name: '窦烨',
-    primary: '量潮科技高级技术顾问',
-    order: 9,
-    titles: [
-      { org: 'qttech', title: '高级技术顾问' },
     ],
   },
 ]
