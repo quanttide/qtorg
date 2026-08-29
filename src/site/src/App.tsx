@@ -7,9 +7,10 @@ export default function App() {
         <h1>量潮组织中心</h1>
         <nav>
           <Link to="/">首页</Link>
-          <Link to="/qtalliance">联盟</Link>
-          <Link to="/qttech">公司</Link>
-          <Link to="/qtacademy">实训基地</Link>
+          <Link to="/orgs/qtalliance">联盟</Link>
+          <Link to="/orgs/qttech">公司</Link>
+          <Link to="/orgs/qtacademy">实训基地</Link>
+          <Link to="/people">人物</Link>
         </nav>
       </header>
       <main>

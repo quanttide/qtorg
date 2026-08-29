@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { PersonCard } from '../components'
+import { orgs, peopleSorted } from '../data/people'
 
 export default function Home() {
   return (
@@ -7,23 +9,33 @@ export default function Home() {
         <h2>量潮组织中心</h2>
         <p>公开披露组织管理档案的组织信息，包括组织架构、部门设置、岗位体系与治理架构。</p>
       </div>
-      
+
       <div className="org-grid">
-        <Link to="/qtalliance" className="org-card">
-          <div className="org-card-icon">🤝</div>
-          <h3>量潮创新联盟</h3>
-          <p>盟友生态载体</p>
-        </Link>
-        <Link to="/qttech" className="org-card">
-          <div className="org-card-icon">🏢</div>
-          <h3>量潮科技</h3>
-          <p>现行经营主体</p>
-        </Link>
-        <Link to="/qtacademy" className="org-card">
-          <div className="org-card-icon">🎓</div>
-          <h3>量潮实训基地</h3>
-          <p>人才培养枢纽</p>
-        </Link>
+        {orgs.map(org => (
+          <Link key={org.id} to={org.path} className="org-card">
+            <div className="org-card-icon">{org.icon}</div>
+            <h3>{org.name}</h3>
+            <p>{org.tagline}</p>
+          </Link>
+        ))}
+      </div>
+
+      <div className="home-people">
+        <div className="home-people-header">
+          <h3>核心人物</h3>
+          <Link to="/people" className="home-people-more">全部人物 →</Link>
+        </div>
+        <div className="team-grid">
+          {peopleSorted.slice(0, 5).map(p => (
+            <PersonCard
+              key={p.id}
+              id={p.id}
+              name={p.name}
+              title={p.primary}
+              orgs={[...new Set(p.titles.map(t => t.org))]}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

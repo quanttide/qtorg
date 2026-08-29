@@ -1,4 +1,5 @@
-import { DepartmentCard, OrgTree } from '../../components'
+import { DepartmentCard, OrgTree, PersonCard } from '../../components'
+import { peopleSorted } from '../../data/people'
 
 const orgTree = {
   name: '量潮创新联盟',
@@ -50,45 +51,16 @@ export default function Qtalliance() {
         
         <h3>理事会成员</h3>
         <div className="team-grid">
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>张果</h4>
-            <p className="team-title">联盟创始人、联盟理事长</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>奚哲勖</h4>
-            <p className="team-title">联盟副理事长</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>樊仲琛</h4>
-            <p className="team-title">联盟副理事长</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>黄梓姗</h4>
-            <p className="team-title">联盟理事、理事会秘书</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>梁嘉伟</h4>
-            <p className="team-title">联盟理事、理事会秘书</p>
-          </div>
+          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qtalliance' && t.title.includes('理事'))).map(p => (
+            <PersonCard key={p.id} id={p.id} name={p.name} title={p.titles.find(t => t.org === 'qtalliance')!.title} />
+          ))}
         </div>
-        
+
         <h3>联盟秘书处</h3>
         <div className="team-grid">
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>涂雅芳</h4>
-            <p className="team-title">联盟代表、联盟秘书长</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>刘婧怡</h4>
-            <p className="team-title">联盟代表、联盟副秘书长</p>
-          </div>
+          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qtalliance' && t.title.includes('秘书长'))).map(p => (
+            <PersonCard key={p.id} id={p.id} name={p.name} title={p.titles.find(t => t.org === 'qtalliance')!.title} />
+          ))}
         </div>
       </section>
 

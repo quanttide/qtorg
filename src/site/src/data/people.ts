@@ -1,0 +1,133 @@
+export interface OrgTitle {
+  title: string
+  /** 职责描述（仅当档案文档中有依据时填写） */
+  desc?: string
+}
+
+export interface Person {
+  /** 手拍拼音 slug，如 zhangguo */
+  id: string
+  name: string
+  /** 一句话主身份 */
+  primary: string
+  /** 各组织职务（单一事实源：profile 各组织 title.md 的手工镜像） */
+  titles: (OrgTitle & { org: OrgId })[]
+  /** 排序权重：越小越靠前（创始人 → 合伙人 → 治理职务 → 顾问） */
+  order: number
+}
+
+export type OrgId = 'qtalliance' | 'qttech' | 'qtacademy'
+
+export interface Org {
+  id: OrgId
+  name: string
+  short: string
+  tagline: string
+  icon: string
+  path: string
+}
+
+export const orgs: Org[] = [
+  { id: 'qtalliance', name: '量潮创新联盟', short: '联盟', tagline: '盟友生态的组织载体', icon: '🤝', path: '/orgs/qtalliance' },
+  { id: 'qttech', name: '量潮科技', short: '公司', tagline: '现行经营主体', icon: '🏢', path: '/orgs/qttech' },
+  { id: 'qtacademy', name: '量潮实训基地', short: '实训基地', tagline: '人才培养枢纽', icon: '🎓', path: '/orgs/qtacademy' },
+]
+
+export const orgMap: Record<OrgId, Org> = Object.fromEntries(orgs.map(o => [o.id, o])) as Record<OrgId, Org>
+
+export const people: Person[] = [
+  {
+    id: 'zhangguo',
+    name: '张果',
+    primary: '量潮科技创始人、董事长、CEO',
+    order: 1,
+    titles: [
+      { org: 'qttech', title: '创始人、董事长、CEO' },
+      { org: 'qtalliance', title: '联盟创始人、联盟理事长' },
+    ],
+  },
+  {
+    id: 'huangzishan',
+    name: '黄梓姗',
+    primary: '量潮科技合伙人、COO',
+    order: 2,
+    titles: [
+      { org: 'qttech', title: '合伙人、COO' },
+      { org: 'qtalliance', title: '联盟理事、理事会秘书' },
+    ],
+  },
+  {
+    id: 'liangjiawei',
+    name: '梁嘉伟',
+    primary: '量潮科技合伙人、CTO',
+    order: 3,
+    titles: [
+      { org: 'qttech', title: '合伙人、CTO' },
+      { org: 'qtalliance', title: '联盟理事、理事会秘书' },
+    ],
+  },
+  {
+    id: 'tuyafang',
+    name: '涂雅芳',
+    primary: '量潮科技股东代表、执行副总裁',
+    order: 4,
+    titles: [
+      { org: 'qttech', title: '股东代表、执行副总裁' },
+      { org: 'qtalliance', title: '联盟代表、联盟秘书长', desc: '日常运营协调与信息流转' },
+    ],
+  },
+  {
+    id: 'liujingyi',
+    name: '刘婧怡',
+    primary: '量潮科技股东代表、秘书长',
+    order: 5,
+    titles: [
+      { org: 'qttech', title: '股东代表、秘书长' },
+      { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
+    ],
+  },
+  {
+    id: 'xizhexu',
+    name: '奚哲勖',
+    primary: '量潮科技首席创始顾问',
+    order: 6,
+    titles: [
+      { org: 'qttech', title: '首席创始顾问' },
+      { org: 'qtalliance', title: '联盟副理事长' },
+    ],
+  },
+  {
+    id: 'fanzhongchen',
+    name: '樊仲琛',
+    primary: '量潮科技首席战略顾问',
+    order: 7,
+    titles: [
+      { org: 'qttech', title: '首席战略顾问' },
+      { org: 'qtalliance', title: '联盟副理事长' },
+    ],
+  },
+  {
+    id: 'xiezipeng',
+    name: '谢梓鹏',
+    primary: '量潮科技资深技术顾问',
+    order: 8,
+    titles: [
+      { org: 'qttech', title: '资深技术顾问' },
+    ],
+  },
+  {
+    id: 'douye',
+    name: '窦烨',
+    primary: '量潮科技高级技术顾问',
+    order: 9,
+    titles: [
+      { org: 'qttech', title: '高级技术顾问' },
+    ],
+  },
+]
+
+export const peopleSorted = [...people].sort((a, b) => a.order - b.order)
+
+export function getPerson(id: string): Person | undefined {
+  return people.find(p => p.id === id)
+}

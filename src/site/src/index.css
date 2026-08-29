@@ -452,3 +452,30 @@ footer {
   font-size: 0.9rem;
   margin: 0;
 }
+/* 人物区块（首页） */
+.home-people {
+  margin-top: 40px;
+}
+
+.home-people-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.home-people-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #0f172a;
+}
+
+.home-people-more {
+  font-size: 0.9rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.home-people-more:hover {
+  text-decoration: underline;
+}

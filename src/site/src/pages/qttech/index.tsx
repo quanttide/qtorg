@@ -1,4 +1,5 @@
-import { DepartmentCard, RankTable, OrgTree } from '../../components'
+import { DepartmentCard, RankTable, OrgTree, PersonCard } from '../../components'
+import { peopleSorted } from '../../data/people'
 
 const orgTree = {
   name: '量潮科技',
@@ -103,55 +104,16 @@ export default function Qttech() {
       <section className="page-section">
         <h3>管理团队</h3>
         <div className="team-grid">
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>张果</h4>
-            <p className="team-title">创始人、董事长、CEO</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>黄梓姗</h4>
-            <p className="team-title">合伙人、COO</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>梁嘉伟</h4>
-            <p className="team-title">合伙人、CTO</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>涂雅芳</h4>
-            <p className="team-title">股东代表、执行副总裁</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>刘婧怡</h4>
-            <p className="team-title">股东代表、秘书长</p>
-          </div>
+          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qttech' && !t.title.includes('顾问'))).map(p => (
+            <PersonCard key={p.id} id={p.id} name={p.name} title={p.titles.find(t => t.org === 'qttech')!.title} />
+          ))}
         </div>
-        
+
         <h3>顾问团队</h3>
         <div className="team-grid">
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>奚哲勖</h4>
-            <p className="team-title">首席创始顾问</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>樊仲琛</h4>
-            <p className="team-title">首席战略顾问</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>谢梓鹏</h4>
-            <p className="team-title">资深技术顾问</p>
-          </div>
-          <div className="team-card">
-            <div className="team-photo-placeholder"></div>
-            <h4>窦烨</h4>
-            <p className="team-title">高级技术顾问</p>
-          </div>
+          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qttech' && t.title.includes('顾问'))).map(p => (
+            <PersonCard key={p.id} id={p.id} name={p.name} title={p.titles.find(t => t.org === 'qttech')!.title} />
+          ))}
         </div>
       </section>
 
