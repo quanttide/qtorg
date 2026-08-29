@@ -149,11 +149,11 @@ export default function Qttech() {
         <h3>治理架构</h3>
         <div className="governance-grid">
           <div className="governance-card">
-            <h4>股东代表大会（上议院）</h4>
+            <h4>股东代表大会</h4>
             <p>代表股东意志行使所有权——由全体股东组成，定期会议审议重大事项。</p>
           </div>
           <div className="governance-card">
-            <h4>公司代表大会（下议院）</h4>
+            <h4>公司代表大会</h4>
             <p>代表一线执行者行使经营权与民意表达职能——由各业务单元及职能部门代表组成。</p>
           </div>
           <div className="governance-card">
@@ -161,14 +161,6 @@ export default function Qttech() {
             <p>连接决策层与执行层的枢纽机制，负责日常运营协调与信息流转。</p>
           </div>
         </div>
-      </section>
-
-      <section className="page-section">
-        <h3>关联</h3>
-        <ul>
-          <li>量潮控股（qthold）：拟设的控股主体，承接治理升级</li>
-          <li>量潮实训基地（qtacademy）：人才培养枢纽</li>
-        </ul>
       </section>
     </div>
   )
