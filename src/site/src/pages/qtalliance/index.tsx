@@ -47,6 +47,49 @@ export default function Qtalliance() {
             icon="📋"
           />
         </div>
+        
+        <h3>理事会成员</h3>
+        <div className="team-grid">
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>张果</h4>
+            <p className="team-title">理事长（创始人）</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>奚哲勖</h4>
+            <p className="team-title">副理事长（首席创始顾问）</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>樊仲琛</h4>
+            <p className="team-title">副理事长（首席战略顾问）</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>黄梓姗</h4>
+            <p className="team-title">秘书（合伙人、COO）</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>梁嘉伟</h4>
+            <p className="team-title">秘书（合伙人、CTO）</p>
+          </div>
+        </div>
+        
+        <h3>联盟秘书处</h3>
+        <div className="team-grid">
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>涂雅芳</h4>
+            <p className="team-title">政府秘书长</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>刘婧怡</h4>
+            <p className="team-title">政府秘书长</p>
+          </div>
+        </div>
       </section>
 
       <section className="page-section">
