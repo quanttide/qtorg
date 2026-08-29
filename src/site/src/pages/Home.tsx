@@ -8,15 +8,15 @@ export default function Home() {
       
       <h3>组织体系</h3>
       <div className="org-cards">
-        <Link to="/company" className="org-card">
+        <Link to="/qttech" className="org-card">
           <h4>量潮科技</h4>
           <p>现行经营主体</p>
         </Link>
-        <Link to="/training-base" className="org-card">
+        <Link to="/qtacademy" className="org-card">
           <h4>量潮实训基地</h4>
           <p>人才培养枢纽</p>
         </Link>
-        <Link to="/alliance" className="org-card">
+        <Link to="/qtalliance" className="org-card">
           <h4>量潮创新联盟</h4>
           <p>盟友生态载体</p>
         </Link>
