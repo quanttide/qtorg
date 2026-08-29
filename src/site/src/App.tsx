@@ -7,7 +7,9 @@ export default function App() {
         <h1>量潮组织中心</h1>
         <nav>
           <Link to="/">首页</Link>
-          <Link to="/org">组织架构</Link>
+          <Link to="/company">公司</Link>
+          <Link to="/training-base">实训基地</Link>
+          <Link to="/alliance">联盟</Link>
         </nav>
       </header>
       <main>

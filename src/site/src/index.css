@@ -25,3 +25,33 @@ footer {
   color: #888;
   font-size: 0.85rem;
 }
+
+.org-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.org-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
+}
+
+.org-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.org-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #1a1a1a;
+}
+
+.org-card p {
+  margin: 0;
+  color: #666;
+}
