@@ -114,14 +114,6 @@ export default function Qtalliance() {
           </div>
         </div>
       </section>
-
-      <section className="page-section">
-        <h3>关联</h3>
-        <ul>
-          <li>联盟管理领域（domains/quanttide-alliance）：联盟实践的方法与过程</li>
-          <li>可见性系列：qtopen / qtproduct / qtbusiness / qtacademics，盟友是收官一环</li>
-        </ul>
-      </section>
     </div>
   )
 }

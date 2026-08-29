@@ -9,6 +9,11 @@ export default function Home() {
       </div>
       
       <div className="org-grid">
+        <Link to="/qtalliance" className="org-card">
+          <div className="org-card-icon">🤝</div>
+          <h3>量潮创新联盟</h3>
+          <p>盟友生态载体</p>
+        </Link>
         <Link to="/qttech" className="org-card">
           <div className="org-card-icon">🏢</div>
           <h3>量潮科技</h3>
@@ -18,11 +23,6 @@ export default function Home() {
           <div className="org-card-icon">🎓</div>
           <h3>量潮实训基地</h3>
           <p>人才培养枢纽</p>
-        </Link>
-        <Link to="/qtalliance" className="org-card">
-          <div className="org-card-icon">🤝</div>
-          <h3>量潮创新联盟</h3>
-          <p>盟友生态载体</p>
         </Link>
       </div>
     </section>

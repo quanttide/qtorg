@@ -109,14 +109,6 @@ export default function Qtacademy() {
           </div>
         </div>
       </section>
-
-      <section className="page-section">
-        <h3>关联</h3>
-        <ul>
-          <li>公司组织：qttech/（发包方的事业部与秘书处体系）</li>
-          <li>职级体系：qtacademy/institution/rank.md</li>
-        </ul>
-      </section>
     </div>
   )
 }
