@@ -14,6 +14,12 @@ export interface Person {
   titles: (OrgTitle & { org: OrgId })[]
   /** 排序权重：越小越靠前（创始人 → 合伙人 → 治理职务 → 顾问） */
   order: number
+  /** 学术履历（可选：职位、研究领域、成果） */
+  academic?: {
+    position: string
+    fields: string[]
+    achievements: string[]
+  }
 }
 
 export type OrgId = 'qtalliance' | 'qttech' | 'qtacademy'
@@ -105,6 +111,15 @@ export const people: Person[] = [
       { org: 'qttech', title: '首席战略顾问' },
       { org: 'qtalliance', title: '联盟副理事长' },
     ],
+    academic: {
+      position: '西安交通大学经济与金融学院副教授',
+      fields: ['产业升级', '创新增长'],
+      achievements: [
+        '主持国家社会科学基金青年项目 1 项',
+        '参与国家社科基金重点项目、国家自然科学基金面上项目等',
+        '在《中国工业经济》《经济学季刊》发表论文多篇',
+      ],
+    },
   },
   {
     id: 'xiezipeng',

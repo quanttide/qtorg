@@ -67,6 +67,29 @@ export default function PersonDetail() {
         </div>
       </section>
 
+      {person.academic && (
+        <section className="page-section">
+          <h3>学术履历</h3>
+          <div className="academic">
+            <p className="academic-position">{person.academic.position}</p>
+            {person.academic.fields.length > 0 && (
+              <div className="academic-fields">
+                {person.academic.fields.map(f => (
+                  <span key={f} className="org-badge">{f}</span>
+                ))}
+              </div>
+            )}
+            {person.academic.achievements.length > 0 && (
+              <ul className="academic-achievements">
+                {person.academic.achievements.map((a, i) => (
+                  <li key={i}>{a}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </section>
+      )}
+
       <section className="page-section">
         <h3>其他人物</h3>
         <div className="team-grid">
