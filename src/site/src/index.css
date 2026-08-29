@@ -127,7 +127,12 @@ footer {
 }
 
 /* 页面样式 */
-section {
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.page-header {
   background: white;
   border-radius: 12px;
   padding: 2rem;
@@ -135,57 +140,317 @@ section {
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-section h2 {
-  font-size: 1.75rem;
+.page-header h2 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.page-header .subtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.page-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.page-section h3 {
+  font-size: 1.5rem;
   color: #111827;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #e5e7eb;
 }
 
-section h3 {
-  font-size: 1.25rem;
-  color: #374151;
-  margin: 1.5rem 0 0.75rem 0;
-}
-
-section p {
+.page-section p {
   color: #4b5563;
   margin-bottom: 1rem;
 }
 
-section ul, section ol {
+.page-section ul {
   margin-left: 1.5rem;
   margin-bottom: 1rem;
   color: #4b5563;
 }
 
-section li {
+.page-section li {
   margin-bottom: 0.5rem;
 }
 
-section table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
+/* 部门卡片样式 */
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
-section th, section td {
+.department-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.department-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.department-card h4 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.department-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.department-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.department-details li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.department-details li:last-child {
+  border-bottom: none;
+}
+
+.department-details strong {
+  color: #374151;
+}
+
+/* 职级表样式 */
+.rank-section h3 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.rank-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.rank-table th,
+.rank-table td {
   padding: 0.75rem 1rem;
   text-align: left;
   border-bottom: 1px solid #e5e7eb;
 }
 
-section th {
+.rank-table th {
   background: #f9fafb;
   font-weight: 600;
   color: #374151;
 }
 
-section td {
+.rank-table td {
   color: #4b5563;
 }
 
-section tr:hover {
+.rank-table tr:hover {
   background: #f9fafb;
+}
+
+.rank-badge {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* 组织结构树样式 */
+.org-tree-container {
+  padding: 2rem 0;
+  overflow-x: auto;
+}
+
+.org-tree {
+  padding-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.org-tree li {
+  float: none;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.org-tree li::before,
+.org-tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #94a3b8;
+  width: 50%;
+  height: 20px;
+}
+
+.org-tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #94a3b8;
+}
+
+.org-tree li:only-child::after,
+.org-tree li:only-child::before {
+  display: none;
+}
+
+.org-tree li:only-child {
+  padding-top: 0;
+}
+
+.org-tree li:first-child::before,
+.org-tree li:last-child::after {
+  border: 0 none;
+}
+
+.org-tree li:last-child::before {
+  border-right: 2px solid #94a3b8;
+  border-radius: 0 5px 0 0;
+}
+
+.org-tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.org-tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #94a3b8;
+  width: 0;
+  height: 20px;
+}
+
+.org-node {
+  border: 2px solid #6366f1;
+  border-radius: 8px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #1e293b;
+  background: white;
+  display: inline-block;
+  min-width: 100px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.org-node:hover {
+  background: #6366f1;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.org-node-root {
+  background: #1e293b;
+  color: white;
+  font-weight: bold;
+  min-width: 120px;
+}
+
+.org-node-department {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.org-node-office {
+  border-color: #059669;
+  background: #ecfdf5;
+}
+
+.org-node-unit {
+  border-color: #7c3aed;
+  background: #f5f3ff;
+}
+
+/* 治理架构样式 */
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.governance-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.governance-card h4 {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.governance-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* 成员类型样式 */
+.member-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.member-type {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.member-type h4 {
+  font-size: 1rem;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.member-type p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin: 0;
 }
