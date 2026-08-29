@@ -318,7 +318,7 @@ footer {
 .tree-connector {
   width: 2px;
   height: 24px;
-  background: #cbd5e1;
+  background: #94a3b8;
   flex-shrink: 0;
 }
 
@@ -327,6 +327,17 @@ footer {
   gap: 1rem;
   padding-top: 0;
   flex-wrap: nowrap;
+  position: relative;
+}
+
+.tree-children::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #94a3b8;
 }
 
 .tree-child-wrapper {
@@ -339,7 +350,7 @@ footer {
 .tree-child-connector {
   width: 2px;
   height: 24px;
-  background: #cbd5e1;
+  background: #94a3b8;
   flex-shrink: 0;
 }
 
