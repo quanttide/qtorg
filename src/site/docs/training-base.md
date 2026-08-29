@@ -6,15 +6,21 @@
 
 ## 页面结构
 
-- **基地简介**：定位、核心目标
+- **基地简介**：定位（人才培养枢纽）、核心目标（让人才在真实产出中被筛选和培养）
 - **部门设置**：职能部门（技术/产品/市场/综合）、管理部门（秘书处）
 - **职级体系**：L-3/L-2/L-1/L0/L1+ 职级与晋升路径
-- **参与方式**：准入流程、考核机制
+- **参与方式**：准入流程、考核机制、贡献记账
 
 ## 数据来源
 
 - 数据目录：`data/profile/qtacademy/`
-- 主要文件：`index.md`、`structure/`、`institution/`
+- 主要文件：
+  - `index.md`：组织定位、核心目标、参与者等级
+  - `structure/index.md`：组织结构概览
+  - `structure/department.md`：部门设置详情
+  - `institution/index.md`：制度概览
+  - `institution/rank.md`：职级体系（L-3/L-2/L-1/L0/L1+）
+  - `institution/department.md`：职能式划分制度
 
 ## 技术方案
 
