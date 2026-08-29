@@ -142,6 +142,16 @@ export default function Qttech() {
             <h4>樊仲琛</h4>
             <p className="team-title">首席战略顾问</p>
           </div>
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>谢梓鹏</h4>
+            <p className="team-title">资深技术顾问</p>
+          </div>
+          <div className="team-card">
+            <div className="team-photo-placeholder"></div>
+            <h4>窦烨</h4>
+            <p className="team-title">高级技术顾问</p>
+          </div>
         </div>
       </section>
 
