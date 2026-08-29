@@ -53,27 +53,27 @@ export default function Qtalliance() {
           <div className="team-card">
             <div className="team-photo-placeholder"></div>
             <h4>张果</h4>
-            <p className="team-title">理事长（创始人）</p>
+            <p className="team-title">联盟创始人、联盟理事长</p>
           </div>
           <div className="team-card">
             <div className="team-photo-placeholder"></div>
             <h4>奚哲勖</h4>
-            <p className="team-title">副理事长（首席创始顾问）</p>
+            <p className="team-title">联盟副理事长</p>
           </div>
           <div className="team-card">
             <div className="team-photo-placeholder"></div>
             <h4>樊仲琛</h4>
-            <p className="team-title">副理事长（首席战略顾问）</p>
+            <p className="team-title">联盟副理事长</p>
           </div>
           <div className="team-card">
             <div className="team-photo-placeholder"></div>
             <h4>黄梓姗</h4>
-            <p className="team-title">秘书（合伙人、COO）</p>
+            <p className="team-title">联盟理事、理事会秘书</p>
           </div>
           <div className="team-card">
             <div className="team-photo-placeholder"></div>
             <h4>梁嘉伟</h4>
-            <p className="team-title">秘书（合伙人、CTO）</p>
+            <p className="team-title">联盟理事、理事会秘书</p>
           </div>
         </div>
         
@@ -82,12 +82,12 @@ export default function Qtalliance() {
           <div className="team-card">
             <div className="team-photo-placeholder"></div>
             <h4>涂雅芳</h4>
-            <p className="team-title">政府秘书长</p>
+            <p className="team-title">联盟代表、联盟秘书长</p>
           </div>
           <div className="team-card">
             <div className="team-photo-placeholder"></div>
             <h4>刘婧怡</h4>
-            <p className="team-title">政府秘书长</p>
+            <p className="team-title">联盟代表、联盟副秘书长</p>
           </div>
         </div>
       </section>
