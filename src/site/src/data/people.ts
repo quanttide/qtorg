@@ -48,68 +48,28 @@ export const people: Person[] = [
     primary: '量潮科技创始人、董事长、CEO',
     order: 1,
     titles: [
-      { org: 'qttech', title: '创始人、董事长、CEO' },
       { org: 'qtalliance', title: '联盟创始人、联盟理事长' },
-    ],
-  },
-  {
-    id: 'huangzishan',
-    name: '黄梓姗',
-    primary: '量潮科技合伙人、COO',
-    order: 2,
-    titles: [
-      { org: 'qttech', title: '合伙人、COO' },
-      { org: 'qtalliance', title: '联盟理事、理事会秘书' },
-    ],
-  },
-  {
-    id: 'liangjiawei',
-    name: '梁嘉伟',
-    primary: '量潮科技合伙人、CTO',
-    order: 3,
-    titles: [
-      { org: 'qttech', title: '合伙人、CTO' },
-      { org: 'qtalliance', title: '联盟理事、理事会秘书' },
-    ],
-  },
-  {
-    id: 'tuyafang',
-    name: '涂雅芳',
-    primary: '量潮科技股东代表、执行副总裁',
-    order: 4,
-    titles: [
-      { org: 'qttech', title: '股东代表、执行副总裁' },
-      { org: 'qtalliance', title: '联盟代表、联盟秘书长', desc: '日常运营协调与信息流转' },
-    ],
-  },
-  {
-    id: 'liujingyi',
-    name: '刘婧怡',
-    primary: '量潮科技股东代表、秘书长',
-    order: 5,
-    titles: [
-      { org: 'qttech', title: '股东代表、秘书长' },
-      { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
+      { org: 'qttech', title: '创始人、董事长、CEO' },
     ],
   },
   {
     id: 'xizhexu',
     name: '奚哲勖',
     primary: '量潮科技首席创始顾问',
-    order: 6,
+    order: 2,
     titles: [
-      { org: 'qttech', title: '首席创始顾问' },
       { org: 'qtalliance', title: '联盟副理事长' },
+      { org: 'qttech', title: '首席创始顾问' },
     ],
   },
   {
     id: 'fanzhongchen',
     name: '樊仲琛',
     primary: '量潮科技首席战略顾问',
-    order: 7,
+    order: 3,
     titles: [
-      { org: 'qttech', title: '首席战略顾问' },
       { org: 'qtalliance', title: '联盟副理事长' },
+      { org: 'qttech', title: '首席战略顾问' },
     ],
     academic: {
       position: '西安交通大学经济与金融学院副教授',
@@ -120,6 +80,46 @@ export const people: Person[] = [
         '在《中国工业经济》《经济学季刊》发表论文多篇',
       ],
     },
+  },
+  {
+    id: 'huangzishan',
+    name: '黄梓姗',
+    primary: '量潮科技合伙人、COO',
+    order: 4,
+    titles: [
+      { org: 'qtalliance', title: '联盟理事、理事会秘书' },
+      { org: 'qttech', title: '合伙人、COO' },
+    ],
+  },
+  {
+    id: 'liangjiawei',
+    name: '梁嘉伟',
+    primary: '量潮科技合伙人、CTO',
+    order: 5,
+    titles: [
+      { org: 'qtalliance', title: '联盟理事、理事会秘书' },
+      { org: 'qttech', title: '合伙人、CTO' },
+    ],
+  },
+  {
+    id: 'tuyafang',
+    name: '涂雅芳',
+    primary: '量潮科技股东代表、执行副总裁',
+    order: 6,
+    titles: [
+      { org: 'qtalliance', title: '联盟代表、联盟秘书长', desc: '日常运营协调与信息流转' },
+      { org: 'qttech', title: '股东代表、执行副总裁' },
+    ],
+  },
+  {
+    id: 'liujingyi',
+    name: '刘婧怡',
+    primary: '量潮科技股东代表、秘书长',
+    order: 7,
+    titles: [
+      { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
+      { org: 'qttech', title: '股东代表、秘书长' },
+    ],
   },
   {
     id: 'xiezipeng',
