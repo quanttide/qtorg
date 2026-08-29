@@ -285,120 +285,55 @@ footer {
 }
 
 /* 组织结构树样式 */
-.org-tree-container {
+.org-tree-new {
   padding: 2rem 0;
   overflow-x: auto;
 }
 
-.org-tree {
-  padding-top: 20px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
-.org-tree li {
-  float: none;
-  text-align: center;
-  list-style-type: none;
-  position: relative;
-  padding: 20px 5px 0 5px;
+.tree-node-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.org-tree li::before,
-.org-tree li::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 50%;
-  border-top: 2px solid #94a3b8;
-  width: 50%;
-  height: 20px;
+.tree-node {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
-.org-tree li::after {
-  right: auto;
-  left: 50%;
-  border-left: 2px solid #94a3b8;
+.tree-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.org-tree li:only-child::after,
-.org-tree li:only-child::before {
-  display: none;
+.tree-connector {
+  width: 2px;
+  height: 24px;
+  background: #cbd5e1;
 }
 
-.org-tree li:only-child {
+.tree-children {
+  display: flex;
+  gap: 1rem;
   padding-top: 0;
 }
 
-.org-tree li:first-child::before,
-.org-tree li:last-child::after {
-  border: 0 none;
+.tree-child-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.org-tree li:last-child::before {
-  border-right: 2px solid #94a3b8;
-  border-radius: 0 5px 0 0;
-}
-
-.org-tree li:first-child::after {
-  border-radius: 5px 0 0 0;
-}
-
-.org-tree ul ul::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  border-left: 2px solid #94a3b8;
-  width: 0;
-  height: 20px;
-}
-
-.org-node {
-  border: 2px solid #6366f1;
-  border-radius: 8px;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #1e293b;
-  background: white;
-  display: inline-block;
-  min-width: 100px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-.org-node:hover {
-  background: #6366f1;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.org-node-root {
-  background: #1e293b;
-  color: white;
-  font-weight: bold;
-  min-width: 120px;
-}
-
-.org-node-department {
-  border-color: #2563eb;
-  background: #eff6ff;
-}
-
-.org-node-office {
-  border-color: #059669;
-  background: #ecfdf5;
-}
-
-.org-node-unit {
-  border-color: #7c3aed;
-  background: #f5f3ff;
+.tree-child-connector {
+  width: 2px;
+  height: 24px;
+  background: #cbd5e1;
 }
 
 /* 治理架构样式 */
