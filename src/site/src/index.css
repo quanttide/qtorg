@@ -126,6 +126,48 @@ footer {
   font-size: 0.95rem;
 }
 
+/* 首页链接卡片 */
+.home-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.home-link-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.home-link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  border-color: #2563eb;
+}
+
+.home-link-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-link-card h3 {
+  font-size: 1.25rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.home-link-card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
 /* 页面样式 */
 .page {
   max-width: 960px;

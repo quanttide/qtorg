@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { PersonCard } from '../components'
-import { orgs, peopleSorted } from '../data/people'
+import { peopleSorted } from '../data/people'
 
 export default function Home() {
   return (
@@ -10,14 +10,17 @@ export default function Home() {
         <p>公开披露组织管理档案的组织信息，包括组织架构、部门设置、岗位体系与治理架构。</p>
       </div>
 
-      <div className="org-grid">
-        {orgs.map(org => (
-          <Link key={org.id} to={org.path} className="org-card">
-            <div className="org-card-icon">{org.icon}</div>
-            <h3>{org.name}</h3>
-            <p>{org.tagline}</p>
-          </Link>
-        ))}
+      <div className="home-links">
+        <Link to="/orgs" className="home-link-card">
+          <div className="home-link-icon">🏢</div>
+          <h3>组织</h3>
+          <p>联盟、公司、实训基地</p>
+        </Link>
+        <Link to="/people" className="home-link-card">
+          <div className="home-link-icon">👥</div>
+          <h3>人物</h3>
+          <p>核心人物与团队</p>
+        </Link>
       </div>
 
       <div className="home-people">

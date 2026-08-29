@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import Home from './pages/Home'
+import Orgs from './pages/Orgs'
 import Qttech from './pages/qttech'
 import Qtacademy from './pages/qtacademy'
 import Qtalliance from './pages/qtalliance'
@@ -16,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
-          <Route path="orgs" element={<Home />} />
+          <Route path="orgs" element={<Orgs />} />
           <Route path="orgs/qttech" element={<Qttech />} />
           <Route path="orgs/qtacademy" element={<Qtacademy />} />
           <Route path="orgs/qtalliance" element={<Qtalliance />} />
