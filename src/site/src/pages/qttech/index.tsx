@@ -126,7 +126,7 @@ export default function Qttech() {
           </div>
           <div className="governance-card">
             <h4>公司代表大会</h4>
-            <p>代表一线执行者行使经营权与民意表达职能——由各业务单元及职能部门代表组成。</p>
+            <p>代表一线执行者行使经营权与民意表达职能——由各业务单元及职能部门代表组成，周会运转、全体表决；内设书记处（汇总提案）、执行委员会（秘书长主持）、技术委员会（CTO 助理主持）。</p>
           </div>
           <div className="governance-card">
             <h4>秘书处</h4>

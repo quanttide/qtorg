@@ -10,7 +10,7 @@ export interface Person {
   name: string
   /** 一句话主身份 */
   primary: string
-  /** 各组织职务（单一事实源：profile 各组织 title.md 的手工镜像） */
+  /** 各组织职务 */
   titles: (OrgTitle & { org: OrgId })[]
   /** 排序权重：越小越靠前（创始人 → 合伙人 → 治理职务 → 顾问） */
   order: number
