@@ -288,12 +288,14 @@ footer {
 .org-tree-new {
   padding: 2rem 0;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .tree-node-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: fit-content;
 }
 
 .tree-node {
@@ -305,6 +307,7 @@ footer {
   font-size: 0.95rem;
   white-space: nowrap;
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .tree-node:hover {
@@ -316,24 +319,28 @@ footer {
   width: 2px;
   height: 24px;
   background: #cbd5e1;
+  flex-shrink: 0;
 }
 
 .tree-children {
   display: flex;
   gap: 1rem;
   padding-top: 0;
+  flex-wrap: nowrap;
 }
 
 .tree-child-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .tree-child-connector {
   width: 2px;
   height: 24px;
   background: #cbd5e1;
+  flex-shrink: 0;
 }
 
 /* 治理架构样式 */
