@@ -104,7 +104,14 @@ export default function Qttech() {
       <section className="page-section">
         <h3>管理团队</h3>
         <div className="team-grid">
-          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qttech' && !t.title.includes('顾问'))).map(p => (
+          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qttech' && !t.title.includes('顾问') && !t.title.includes('助理'))).map(p => (
+            <PersonCard key={p.id} id={p.id} name={p.name} title={p.titles.find(t => t.org === 'qttech')!.title} />
+          ))}
+        </div>
+
+        <h3>秘书处</h3>
+        <div className="team-grid">
+          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qttech' && t.title.includes('助理'))).map(p => (
             <PersonCard key={p.id} id={p.id} name={p.name} title={p.titles.find(t => t.org === 'qttech')!.title} />
           ))}
         </div>

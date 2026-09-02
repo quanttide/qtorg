@@ -58,7 +58,7 @@ export default function Qtalliance() {
 
         <h3>联盟秘书处</h3>
         <div className="team-grid">
-          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qtalliance' && t.title.includes('秘书长'))).map(p => (
+          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qtalliance' && (t.title.includes('秘书长') || t.title.includes('秘书处秘书')))).map(p => (
             <PersonCard key={p.id} id={p.id} name={p.name} title={p.titles.find(t => t.org === 'qtalliance')!.title} />
           ))}
         </div>
