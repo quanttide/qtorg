@@ -137,7 +137,7 @@ export const people: Person[] = [
     primary: '量潮科技公司代表、秘书长',
     order: 10,
     titles: [
-      { org: 'qtalliance', title: '秘书处秘书' },
+      { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
       { org: 'qttech', title: '公司代表、秘书长' },
     ],
   },
