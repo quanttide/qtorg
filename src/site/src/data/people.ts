@@ -151,16 +151,6 @@ export const people: Person[] = [
       { org: 'qttech', title: '公司代表、副秘书长' },
     ],
   },
-  {
-    id: 'haoziteng',
-    name: '郝子腾',
-    primary: '量潮科技公司代表、副秘书长',
-    order: 12,
-    titles: [
-      { org: 'qtalliance', title: '秘书处秘书' },
-      { org: 'qttech', title: '公司代表、副秘书长' },
-    ],
-  },
 ]
 
 export const peopleSorted = [...people].sort((a, b) => a.order - b.order)
