@@ -132,43 +132,33 @@ export const people: Person[] = [
     ],
   },
   {
-    id: 'liujingyi',
-    name: '刘婧怡',
-    primary: '量潮科技股东代表、秘书长',
-    order: 9,
-    titles: [
-      { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
-      { org: 'qttech', title: '股东代表、秘书长' },
-    ],
-  },
-  {
     id: 'zhaoziyi',
     name: '赵子奕',
-    primary: '量潮科技公司代表、CEO助理',
+    primary: '量潮科技公司代表、秘书长',
     order: 10,
     titles: [
       { org: 'qtalliance', title: '秘书处秘书' },
-      { org: 'qttech', title: '公司代表、CEO助理' },
+      { org: 'qttech', title: '公司代表、秘书长' },
     ],
   },
   {
     id: 'lixiang',
     name: '黎想',
-    primary: '量潮科技公司代表、CTO助理',
+    primary: '量潮科技公司代表、副秘书长',
     order: 11,
     titles: [
       { org: 'qtalliance', title: '秘书处秘书' },
-      { org: 'qttech', title: '公司代表、CTO助理' },
+      { org: 'qttech', title: '公司代表、副秘书长' },
     ],
   },
   {
     id: 'haoziteng',
     name: '郝子腾',
-    primary: '量潮科技公司代表、CTO助理',
+    primary: '量潮科技公司代表、副秘书长',
     order: 12,
     titles: [
       { org: 'qtalliance', title: '秘书处秘书' },
-      { org: 'qttech', title: '公司代表、CTO助理' },
+      { org: 'qttech', title: '公司代表、副秘书长' },
     ],
   },
 ]
