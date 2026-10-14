@@ -12,7 +12,7 @@ export interface Person {
   primary: string
   /** 各组织职务 */
   titles: (OrgTitle & { org: OrgId })[]
-  /** 排序权重：越小越靠前（创始人 → 合伙人 → 治理职务 → 顾问） */
+  /** 排序权重：越小越靠前（按联盟职务排序，无联盟职务者列后） */
   order: number
   /** 学术履历（可选：职位、研究领域、成果） */
   academic?: {
@@ -102,30 +102,10 @@ export const people: Person[] = [
     ],
   },
   {
-    id: 'xiezipeng',
-    name: '谢梓鹏',
-    primary: '量潮科技资深技术顾问',
-    order: 6,
-    titles: [
-      { org: 'qtalliance', title: '联盟代表' },
-      { org: 'qttech', title: '资深技术顾问' },
-    ],
-  },
-  {
-    id: 'douye',
-    name: '窦烨',
-    primary: '量潮科技高级技术顾问',
-    order: 7,
-    titles: [
-      { org: 'qtalliance', title: '联盟代表' },
-      { org: 'qttech', title: '高级技术顾问' },
-    ],
-  },
-  {
     id: 'tuyafang',
     name: '涂雅芳',
     primary: '量潮科技股东代表、执行副总裁',
-    order: 8,
+    order: 6,
     titles: [
       { org: 'qtalliance', title: '联盟代表、联盟秘书长', desc: '日常运营协调与信息流转' },
       { org: 'qttech', title: '股东代表、执行副总裁' },
@@ -135,20 +115,76 @@ export const people: Person[] = [
     id: 'zhaoziyi',
     name: '赵子奕',
     primary: '量潮科技公司代表、秘书长',
-    order: 10,
+    order: 7,
     titles: [
-      { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
+      { org: 'qtalliance', title: '联盟代表、联盟常务副秘书长' },
       { org: 'qttech', title: '公司代表、秘书长' },
     ],
   },
   {
-    id: 'lixiang',
-    name: '黎想',
+    id: 'baoyuhang',
+    name: '鲍宇航',
+    primary: '量潮实训基地总经理',
+    order: 8,
+    titles: [
+      { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
+      { org: 'qtacademy', title: '总经理、实训基地代表' },
+    ],
+  },
+  {
+    id: 'likexin',
+    name: '李可欣',
     primary: '量潮科技公司代表、副秘书长',
+    order: 9,
+    titles: [
+      { org: 'qtalliance', title: '联盟代表、联盟秘书' },
+      { org: 'qttech', title: '公司代表、副秘书长' },
+    ],
+  },
+  {
+    id: 'linliting',
+    name: '林莉婷',
+    primary: '量潮实训基地副总经理',
+    order: 10,
+    titles: [
+      { org: 'qtalliance', title: '联盟代表、联盟秘书' },
+      { org: 'qtacademy', title: '副总经理、实训基地代表' },
+    ],
+  },
+  {
+    id: 'huangliang',
+    name: '黄亮',
+    primary: '量潮实训基地秘书长',
     order: 11,
     titles: [
-      { org: 'qtalliance', title: '秘书处秘书' },
-      { org: 'qttech', title: '公司代表、副秘书长' },
+      { org: 'qtacademy', title: '实训基地代表、秘书长' },
+    ],
+  },
+  {
+    id: 'wangminhua',
+    name: '王敏华',
+    primary: '量潮实训基地副秘书长',
+    order: 12,
+    titles: [
+      { org: 'qtacademy', title: '实训基地代表、副秘书长' },
+    ],
+  },
+  {
+    id: 'xiezipeng',
+    name: '谢梓鹏',
+    primary: '量潮科技资深技术顾问',
+    order: 13,
+    titles: [
+      { org: 'qttech', title: '资深技术顾问' },
+    ],
+  },
+  {
+    id: 'douye',
+    name: '窦烨',
+    primary: '量潮科技高级技术顾问',
+    order: 14,
+    titles: [
+      { org: 'qttech', title: '高级技术顾问' },
     ],
   },
 ]

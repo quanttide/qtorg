@@ -1,4 +1,5 @@
-import { DepartmentCard, RankTable, OrgTree } from '../../components'
+import { DepartmentCard, PersonCard, RankTable, OrgTree } from '../../components'
+import { peopleSorted } from '../../data/people'
 
 const orgTree = {
   name: '量潮实训基地',
@@ -90,6 +91,15 @@ export default function Qtacademy() {
 
       <section className="page-section">
         <RankTable title="职级体系（L- 系列）" ranks={ranks} />
+      </section>
+
+      <section className="page-section">
+        <h3>管理团队</h3>
+        <div className="team-grid">
+          {peopleSorted.filter(p => p.titles.some(t => t.org === 'qtacademy')).map(p => (
+            <PersonCard key={p.id} id={p.id} name={p.name} title={p.titles.find(t => t.org === 'qtacademy')!.title} />
+          ))}
+        </div>
       </section>
 
       <section className="page-section">
