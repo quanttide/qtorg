@@ -124,11 +124,11 @@ export const people: Person[] = [
   {
     id: 'baoyuhang',
     name: '鲍宇航',
-    primary: '量潮实训基地总经理',
+    primary: '量潮实训基地总裁',
     order: 8,
     titles: [
       { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
-      { org: 'qtacademy', title: '总经理、实训基地代表' },
+      { org: 'qtacademy', title: '总裁、实训基地代表' },
     ],
   },
   {
@@ -144,11 +144,11 @@ export const people: Person[] = [
   {
     id: 'linliting',
     name: '林莉婷',
-    primary: '量潮实训基地副总经理',
+    primary: '量潮实训基地副总裁',
     order: 10,
     titles: [
       { org: 'qtalliance', title: '联盟代表、联盟秘书' },
-      { org: 'qtacademy', title: '副总经理、实训基地代表' },
+      { org: 'qtacademy', title: '副总裁、实训基地代表' },
     ],
   },
   {
