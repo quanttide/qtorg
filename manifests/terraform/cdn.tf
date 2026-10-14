@@ -70,6 +70,11 @@ resource "alicloud_cdn_domain_config" "site_spa_fallback" {
     arg_name  = "flag"
     arg_value = "break"
   }
+  # CDN API 侧会为规则自动附加顺序参数，不声明则每次 plan 都产生漂移（更新 CDN 配置耗时数分钟）
+  function_args {
+    arg_name  = "sequence"
+    arg_value = "1"
+  }
 }
 
 # 强制 HTTPS：HTTP 请求 301 跳转 HTTPS（浏览器密码框安全警告消除）
