@@ -128,7 +128,7 @@ export const people: Person[] = [
     order: 8,
     titles: [
       { org: 'qtalliance', title: '联盟代表、联盟副秘书长' },
-      { org: 'qtacademy', title: '总裁、实训基地代表' },
+      { org: 'qtacademy', title: '总裁、实训基地代表、仲裁官' },
     ],
   },
   {
@@ -148,7 +148,7 @@ export const people: Person[] = [
     order: 10,
     titles: [
       { org: 'qtalliance', title: '联盟代表、联盟秘书' },
-      { org: 'qtacademy', title: '副总裁、实训基地代表' },
+      { org: 'qtacademy', title: '副总裁、实训基地代表、仲裁官' },
     ],
   },
   {
