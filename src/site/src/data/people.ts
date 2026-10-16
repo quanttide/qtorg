@@ -1,4 +1,4 @@
-export interface OrgTitle {
+export interface Title {
   title: string
   /** 职责描述（仅当档案文档中有依据时填写） */
   desc?: string
@@ -11,7 +11,7 @@ export interface Person {
   /** 一句话主身份 */
   primary: string
   /** 各组织职务 */
-  titles: (OrgTitle & { org: OrgId })[]
+  titles: (Title & { org: OrgId })[]
   /** 排序权重：越小越靠前（按联盟职务排序，无联盟职务者列后） */
   order: number
   /** 学术履历（可选：职位、研究领域、成果） */
